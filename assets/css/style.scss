@@ -1,0 +1,345 @@
+$belaBoja: #fff;
+$crnaBoja:#1c353c;
+$sivaBoja: #BEBEBE;
+$tamnaSivaBoja: #727272;
+$plavaBoja: #3458eb;
+$rozeBoja: #fa0791;
+$headingSize: 30px;
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: KronaOne-Regular;
+}
+@font-face {
+	font-family: KronaOne-Regular;
+	src: url('../font/Baloo2-SemiBold.ttf');
+}
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.center-block{
+    width: 80%;
+    margin: 0px auto;
+}
+.d-flex{
+    @include flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+.jc-flex-end{
+    justify-content: flex-end;
+}
+.jc-center{
+    justify-content: center;
+}
+.heading{
+    margin-top: 25px;
+    font-size: $headingSize;
+    color: $crnaBoja;
+    text-align: center;
+    padding: 10px;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: $belaBoja;
+    padding: 15px;
+    width: 100%;
+    nav{
+        ul{
+            list-style-type: none;
+            li{
+                a{
+                    text-decoration: none;
+                    color: $crnaBoja;
+                    font-size: 20px;
+                }   
+                a:hover{
+                    border-bottom: 2px solid $sivaBoja;
+                }   
+            }
+            }
+        }
+    }
+#cover{
+    padding-top: 80px;
+    width: 100%;
+    background-color:$sivaBoja; 
+}
+@mixin mymove-animation{
+    position: relative;
+    animation: mymove 5s;
+    z-index: 1;
+}
+#cover-photo{
+    @include mymove-animation;
+    padding: 20px;
+    width: 40%;
+    img{
+        width: 100%;
+    }
+}
+#cover-text{
+   @extend #cover-photo;
+    color: $crnaBoja;
+    margin-top: 8%;
+    h1{
+        font-size: 48px;
+        text-align: center;
+        overflow: hidden; 
+        white-space: nowrap;  
+        animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    p{
+        @extend h1;
+        font-size: 30px;
+    }
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+#about-me{
+    background-image: url(../img/background-contact.jpg);
+    width: 100%;
+    margin-top: 50px;
+}
+@keyframes mymove {
+    from {left: -200px;}
+    to {left: 0px;}
+  }
+#about-photo{
+    width: 30%;
+    padding: 20px;
+    @include mymove-animation;
+    img{
+        width: 100%;
+    }
+}
+#about-text{
+    @extend #cover-photo;
+    @include mymove-animation;
+    p{
+        font-size: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+@mixin text-size {
+    color: $tamnaSivaBoja;
+    font-size: 30px;
+    text-align: center;
+}
+#skills{
+    width: 100%;
+    margin-top: 20px;
+    h3{
+        @include text-size;
+        margin-top: 15px;
+    }
+}
+.skills{
+    margin-top: 30px;
+}
+@mixin icons-size{
+    font-size: 150px;
+    color: $crnaBoja;
+    text-align: center;
+}
+.icon-skills{
+    @include icons-size;
+}
+
+.icon{
+    width: 32%;
+    border: 2px solid $tamnaSivaBoja;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0px;
+    margin-bottom: 10px;
+}
+.icon:hover
+{
+        box-shadow:
+                2px 2px $crnaBoja,
+                3px 3px $crnaBoja,
+                4px 4px $crnaBoja;
+        transform: translateX(-3px);
+}
+.project{
+    width: 45%;
+    text-align: center;
+    color: $crnaBoja;
+    padding: 15px 5px;
+    margin-bottom:20px ;
+    .grow img{
+        width: 100%;
+    }
+    .grow:hover{
+        transform: scale(1.1);
+    } 
+    h3{
+        font-size: 25px;
+        a{
+            text-decoration: none;
+            color: $crnaBoja;
+        }
+    }
+    h4{
+        font-size: 22px;
+    }
+    p{
+        font-size: 19px;
+    }
+}
+.project img:hover{
+    .grow:hover{
+        -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        transform: scale(1.3);
+    }
+}
+#projects{
+    background-color: $sivaBoja;
+}
+#contact{
+    background-image: url(../img/contact-background-01.jpg);
+    width: 100%;
+    margin-top: 50px;
+}
+.contact-form{
+    width: 45%;
+    input[type="text"], input[type="email"], textarea{
+        margin: 10px;
+        width: 90%;
+        padding: 15px;
+        border: none;
+        border-bottom: 2px solid $crnaBoja;
+        border-radius: 5px;
+        background: 0;
+        font-size: 20px;
+        
+    }
+    input[type="text"]:hover, input[type="email"]:hover, textarea:hover{
+        border-bottom: 2px solid $sivaBoja;
+    }
+    input[type="submit"]{
+        background-color: $tamnaSivaBoja;
+        border: none;
+        padding: 15px;
+        margin: 10px;
+        width: 90%;
+        border-radius: 5px;
+        opacity: 0.8;
+    }
+    input[type="submit"]:hover{
+        background-color: $sivaBoja;
+    }
+    ::placeholder{
+        color: $crnaBoja;
+    }
+    ::placeholder:hover{
+        color: $sivaBoja;
+    }
+    :hover::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $sivaBoja;
+      }
+      :hover::-moz-placeholder { /* Firefox 19+ */
+        color: $sivaBoja;
+      }
+      :hover:-ms-input-placeholder { /* IE 10+ */
+        color: $sivaBoja;
+      }
+      :hover:-moz-placeholder { /* Firefox 18- */
+        color: $sivaBoja;
+      }
+}
+.contact-me{
+    width: 45%;
+    padding: 10px;
+    a{
+        color: $crnaBoja;
+        text-decoration: none;
+        .contact-01{
+            border: 2px solid $tamnaSivaBoja;
+            background-color: rgba($color: #727272, $alpha: 0.6);
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 8px;
+            h2{
+                font-size: 20px;
+            }
+        }
+        .contact-01:hover{
+            background-color: $sivaBoja;
+        }
+    }
+    }
+.fd-column{
+    flex-direction: column;
+}
+footer{
+    background-color: $sivaBoja;
+    margin-top: 50px;
+    padding: 25px;
+    #footer-text{
+        width: 45%;
+        color: $crnaBoja;;
+        text-align: center;
+        h2{
+            font-size: 29px;
+        }
+        a{
+            color: $crnaBoja;
+            text-decoration: none;
+        }
+    }
+    .fa-facebook:hover{
+        color: $plavaBoja;
+    }
+    .fa-css3-alt:hover{
+        @extend .fa-facebook;
+    }
+    .fa-sitemap:hover{
+        @extend .fa-facebook;
+    }
+    .fa-instagram:hover{
+        color: $rozeBoja;
+    }
+    .fa-sass:hover{
+        @extend .fa-instagram;
+    }
+    .fa-file-code:hover{
+        @extend .fa-instagram;
+    }
+    #footer-icons{
+        @extend #footer-text;
+        font-size: 35px;
+    }
+}
+.space-around{
+    justify-content: space-around;
+}
+#myBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 30px; 
+    z-index: 3; 
+    border: none; 
+    outline: none; 
+    background-color: $tamnaSivaBoja; 
+    color: $belaBoja; 
+    padding: 18px; 
+    border-radius: 10px;
+    font-size: 18px; 
+  }
+  
+  #myBtn:hover {
+    background-color: $crnaBoja;
+  }

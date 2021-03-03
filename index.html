@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="Nevena Mrvaljević 39/20"/>
+        <meta name="keywords" content="web developer, Nevena Mrvaljević, student, web design, portfolio, seo, programming "/>
+        <meta name="description" content="Hi, my name is Mrvaljević Nevena and I'm a student studying to become a web developer. I offer web design, UI/UX design and SEO services"/>
+        <title>Portfolio - Mrvaljević Nevena</title>
+        <link rel="icon" href="assets/img/portfolio.png"  type="image/png"/>
+        <!--css-->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+        <!--responsive -->
+        <link rel="stylesheet" href="assets/css/responsive.css" type="text/css"/>
+        <script src="https://kit.fontawesome.com/74b754e410.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <script>
+            var mybutton = document.getElementById("myBtn");
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+            </script>
+        <main>
+            <header>
+                <div class="center-block">
+                    <nav>
+                        <ul  class="d-flex space-between border-bottom">
+                            <li><a href="#1">About me</a></li>
+                            <li><a href="#2">My skills</a></li>
+                            <li><a href="#3">Projects</a></li>
+                            <li><a href="#4">Contact</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <section id="cover">
+                <div class="center-block d-flex space-between">
+                    <div id="cover-photo">
+                        <img src="assets/img/cover01-img.jpg" alt="laptop"/>
+                    </div>
+                    <div id="cover-text">
+                        <h1>Mrvaljević Nevena</h1>
+                        <p>Web developer</p>
+                    </div>
+                </div>
+            </section>
+           <section id="about-me">
+                <div  class="center-block heading" >
+                    <h2><a name="1">About me</a></h2>
+                </div>
+                <div  class="center-block d-flex jc-center">                
+                    <div id="about-photo">
+                        <img src="assets/img/autor1.jpg" alt="autor">
+                    </div>
+                    <div id="about-text">
+                        <p>My name is Nevena Mrvaljević and I am a 19 year old student based in Pančevo.
+                            I am currently studying at ICT College to become a web developer.
+                             Making websites is interesting to me but I still have a lot to learn.
+                              </p> 
+                              <p>I am open to doing some freelancing work with the skills I currently have.
+                                If you are interested in working with me you can e-mail me or phone me I try to
+                                 respond very quickly and keep a friendly communication with my clients.</p>                    
+                    </div>
+                </div>
+            </section>
+            <section id="skills">
+                <div class="center-block heading">
+                    <h2><a name="2">Skills</h2></a>
+                </div>
+               <div class="skills center-block d-flex space-between">
+                     <div class="icon html">
+                        <i class="fab fa-html5 icon-skills"></i>
+                        <h3>HTML 5</h3>
+                    </div>
+                    <div class="icon css">
+                        <i class="fab fa-css3-alt icon-skills"></i>
+                         <h3>CSS 3</h3>
+                    </div>
+                    <div class="icon sass">
+                        <i class="fab fa-sass icon-skills"></i>
+                        <h3>SASS</h3>
+                    </div>
+                    <div class="icon bootstrap">
+                        <i class="fab fa-bootstrap icon-skills"></i>
+                        <h3>BOOTSTRAP</h3>
+                    </div>
+                    <div class="icon c">
+                        <i class="fas fa-code icon-skills"></i>
+                        <h3>VISUAL C#</h3>
+                     </div>
+                        <div class="icon sql">
+                            <i class="fas fa-database icon-skills"></i>
+                            <h3>SQL/ACCESS</h3>
+                        </div>
+                </div>
+            </section>
+            <section id="projects">
+                <div class="center-block heading">
+                    <h2><a name="3">Projects</a></h2>
+                </div>
+                <div class="center-block d-flex space-between">
+                    <div class="project">
+                        <div class="grow">
+                            <a href="https://kafeterijazrno.000webhostapp.com/" target="_blank">
+                                <img src="assets/img/projekat-sajt-kafeterija-550.png" alt="pocetna-strana-sajta-kafeterije"/>
+                            </a>
+                        </div>
+                        <h3><a href="https://kafeterijazrno.000webhostapp.com/" target="_blank">Kafeterija zrno</a></h3>
+                        <h4>Static website</h4>
+                        <p>HTML 5, CSS 3, multiple-page, non-responsive</p>
+                    </div>
+                    <div class="project">
+                        <div class="grow">
+                            <a href="index.html" target="_blank">
+                                <img src="assets/img/projekat-sajt-portfolio-550.png" alt="pocetna-strana-sajta-portfolio"/>
+                            </a>
+                        </div>
+                        <h3><a href="#">Portfolio</a></h3>
+                        <h4>Static website</h4>
+                        <p>HTML 5, CSS 3, SASS, single-page, responsive</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="center-block heading">
+                    <h2><a name="4">Contact</a></h2>
+                </div>
+                <div class="center-block d-flex space-between">
+                    <div class="contact-form">
+                        <form method="GET" id="contact-form" name="contact-form" title="contact-form" action="#">
+							<label for="name"></label>
+							<input type="text" id="name" name="name" placeholder="Your name" required />
+                            <br/>
+							<label for="mail"></label>
+							<input type="email" id="mail" name="mail" placeholder="Your e-mail" required />
+                            <br/>
+							<label for="number"></label>
+							<input type="text" id="number" name="number" placeholder="Your phone number"/>
+							<br/>
+							<label for="message"></label>
+							<textarea id="message" name="message" placeholder="Message" required></textarea>
+							<br/>
+							<input type="submit" id="submit" name="submit" value="Submit"/>
+						</form>
+                    </div>
+                    <div class="contact-me d-flex fd-column jc-center">
+                        <a href="tel:+38163123456" target="_blank">
+                            <div class="contact-01">
+                                <span class="fas fa-phone"></span>
+                            <h2>+381 123456</h2>
+                            </div>
+                        </a>
+                        <a href="mailto:nevena.mrvaljevic.39.20@ict.edu.rs" target="_blank">
+                            <div class="contact-01">
+                                <span class="fas fa-envelope-open-text"></span>
+                                <h2>nevena.mrvaljevic.39.20@ict.edu.rs</h2>
+                            </div>
+                        </a>
+                        <a href="https://goo.gl/maps/KLC9bx8LDj49z4KQ8" target="_blank">
+                            <div class="contact-01">
+                                <span class="fas fa-map-marker-alt"></span>
+                                <h2>Zdravka Čelara 16, Belgrade</h2>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                            <div class="contact-01">
+                                <span class="fab fa-linkedin"></span>
+                                <h2>Check out my LinkedIn profile</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="center-block d-flex space-around">
+                <div id="footer-text">
+                    <h2>Copyright &copy; Mrvaljević Nevena</h2>
+                </div>
+                <div id="footer-icons" class="d-flex space-between">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fas fa-sitemap"></i>
+                    </a>
+                    <a href="assets/css/style.scss" target="_blank">
+                        <i class="fab fa-sass"></i>
+                     </a>
+                     <a href="assets/css/style.css" target="_blank">
+                        <i class="fab fa-css3-alt"></i>
+                    </a>
+                    <a href="assets/css/responsive.css" target="_blank">
+                        <i class="far fa-file-code"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

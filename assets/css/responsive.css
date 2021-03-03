@@ -1,0 +1,170 @@
+@media screen and
+(max-width: 1210px){
+  #cover-text h1{
+    font-size: 40px;
+  }  
+  #cover-text p{
+    font-size: 32px;
+  }
+}
+@media screen and
+(max-width: 1025px){ 
+  #cover-text h1{ 
+  font-size: 35px;
+  }  
+  #cover-text p{
+    font-size: 30px;
+  }
+  .contact-me a .contact-01 {
+    padding: 5px 15px;
+  }
+  .contact-me a .contact-01 h2 {
+    font-size: 17px
+  }
+  input[type="text"], input[type="email"], textarea{
+    font-size: 17px;
+  }
+footer #footer-text h2{
+  font-size: 23px;
+}
+footer #footer-icons{
+  font-size: 30px;
+}
+header nav ul li {
+  margin-top: 5px;
+}
+}
+@media screen and
+(max-width: 895px){ 
+  #cover-text h1{ 
+  font-size: 32px;
+  }  
+  #cover-text p{
+    font-size: 26px;
+  }
+}
+@media screen and 
+(max-width: 813px){
+    #cover{
+        flex-direction: column;
+        align-items: center;
+    }
+    #cover-photo, #cover-text{
+      width: 100%;
+  }
+  #cover-text{
+    margin-bottom: 23px;
+  }
+  #about-text p{
+    font-size: 16px;
+  }
+.icon-skills{
+  font-size: 115px;
+}
+#skills h3, .project h3{
+  font-size: 23px;  
+}
+.project h4{
+  font-size: 20px;
+}
+.project p{
+  font-size: 17px;
+}
+.contact-me a .contact-01 {
+  width: 95%;
+}
+input[type="text"], input[type="email"], textarea{
+  font-size: 15px;
+}
+}
+@media screen and
+(max-width: 715px){
+.contact-me, .contact-form, .project, #about-text{
+  width: 95%;
+}
+#about-photo{
+  width: 60%;
+}
+@media screen and
+(max-width: 585px){
+.icon{
+  width: 45%;
+}
+#about-photo{
+  width: 80%;
+}
+}
+@media screen and
+(max-width: 426px){
+  #cover-text h1{
+    font-size: 30px;
+  }
+  #cover-text p{
+    font-size: 22px;
+  }
+  header nav ul li a{
+    font-size: 16px;
+}
+#about-text{
+  margin-top: 0px;
+}
+.heading{
+  font-size: 22px;
+}
+.icon-skills{
+  font-size: 80px;
+}
+#skills h3{
+  font-size: 20px;  
+}
+}
+footer #footer-text, footer #footer-icons{
+  width: 90%;
+}
+footer #footer-text h2{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+footer #footer-icons{
+  font-size: 25px;
+}
+#myBtn{
+  padding: 13px;
+}
+}
+@media screen and
+(max-width: 381px){
+    header nav ul li a{
+    font-size: 14px;
+    }
+    .contact-me a .contact-01 h2{
+      font-size: 16px;
+    }
+    .contact-me a .contact-01{
+      width: 90%;
+      padding: 8px;
+    }
+    #myBtn{
+      right: 15px;
+    }
+}
+@media screen and
+(max-width: 321px){
+  header nav ul li a{
+    font-size: 10px;
+    }
+  .heading{
+    font-size: 20px;
+   }
+   #skills h3{
+      font-size: 17px;  
+    }
+    .contact-me a .contact-01 h2{
+      font-size: 12px;
+    }
+    .contact-me a .contact-01{
+      width: 80%;
+      padding: 5px;
+    }
+    
+}
